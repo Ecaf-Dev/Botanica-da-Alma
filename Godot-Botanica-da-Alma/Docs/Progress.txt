@@ -14,7 +14,7 @@
 
 **Plataforma:** PC (Windows)  
 **Engine:** Godot Engine stable 4.1
-**Resolução Arte:** 16x16 / 32x32 pixels
+**Resolução Arte:** 32x32 pixel
 
 ---
 
@@ -25,7 +25,7 @@
 
 **Tarefas:**
 - [x] Definir engine (Godot/GameMaker/Outro)
-- [ ] Configurar GitHub/Git
+- [x] Configurar GitHub/Git
 - [ ] Documento de Design (GDD) básico
 - [ ] Definir paleta de cores (16-32 cores)
 - [ ] Referências visiais coletadas

@@ -2,5 +2,5 @@
 
 ## [Data de Hoje]
 - [x] Configurar repositório GitHub
-- [ ] Escolher engine
+- [x] Escolher engine
 - [ ] Primeiros sprites de teste
