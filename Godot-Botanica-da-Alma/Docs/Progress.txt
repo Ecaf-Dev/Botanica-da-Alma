@@ -1,0 +1,244 @@
+
+# PROJETO: HERBARIUM MEMORIAE
+## Plano de Desenvolvimento e Acompanhamento
+
+**Data de Início:** 24/10/2025
+**Versão Atual:** 0.1  
+**Próxima Revisão:** _________
+
+---
+
+## 📊 VISÃO GERAL DO PROJETO
+
+**Conceito:** Jogo de memória herbalístico em pixel art com narrativa dramática, crafting e customização de personagem.
+
+**Plataforma:** PC (Windows)  
+**Engine:** Godot Engine stable 4.1
+**Resolução Arte:** 16x16 / 32x32 pixels
+
+---
+
+## 🎯 METAS POR FASE
+
+### FASE 0: PRÉ-PRODUÇÃO (Semana 1-2)
+**Status:** [] Não Iniciado [x] Em Andamento [ ] Completo
+
+**Tarefas:**
+- [x] Definir engine (Godot/GameMaker/Outro)
+- [ ] Configurar GitHub/Git
+- [ ] Documento de Design (GDD) básico
+- [ ] Definir paleta de cores (16-32 cores)
+- [ ] Referências visiais coletadas
+
+**Checklist Arte:**
+- [ ] Resolução dos sprites definida
+- [ ] Estilo de pixel art estabelecido
+- [ ] Lista de assets priorizada
+
+---
+
+### FASE 1: MVP BÁSICO (Semanas 3-6)
+**Status:** [ ] Não Iniciado [ ] Em Andamento [ ] Completo
+
+**Tarefas Técnicas:**
+- [ ] Sistema de grid de cartas (4x4)
+- [ ] Mecânica de virar/desvirar cartas
+- [ ] Lógica de matching de pares
+- [ ] Contador de turnos (20 turnos)
+- [ ] Fim de jogo ao zerar turnos
+- [ ] Coleta básica de plantas
+
+**Checklist Arte FASE 1:**
+**Cartas da Floresta (15):**
+- [ ] Raiz de Lumina
+- [ ] Flor Sussurro
+- [ ] Folha de Orvalho
+- [ ] Cogumelo Brilhante
+- [ ] Trevo Lunar
+- [ ] Vinha Espinhosa
+- [ ] Semente Cristal
+- [ ] Erva do Vale
+- [ ] Musgo Antigo
+- [ ] Flor Cardinal
+- [ ] Raiz Amarga
+- [ ] Lírio Noturno
+- [ ] Samambaia Prateada
+- [ ] Broto de Carvalho
+- [ ] Orquídea Selvagem
+
+**Ambiente:**
+- [ ] Tabuleiro floresta (cenário)
+- [ ] Sprites placeholder personagem
+
+---
+
+### FASE 2: CRAFTING E PERSONAGEM (Semanas 7-10)
+**Status:** [ ] Não Iniciado [ ] Em Andamento [ ] Completo
+
+**Tarefas Técnicas:**
+- [ ] Tela de crafting de poções
+- [ ] Sistema de receitas (2-3 plantas → poção)
+- [ ] 3-4 poções básicas
+- [ ] Loja para vender poções
+- [ ] Sistema de moeda
+- [ ] Menu principal (Cidade → Regiões)
+
+**Checklist Arte FASE 2:**
+**Sistema de Customização:**
+**Silhuetas Base:**
+- [ ] Masculina (16x32px)
+- [ ] Feminina (16x32px)
+
+**Componentes:**
+**Cabelos (3 tipos cada):**
+- [ ] Curto/Masculino
+- [ ] Longo/Masculino
+- [ ] Moicano/Masculino
+- [ ] Longo/Feminino
+- [ ] Ondulado/Feminino
+- [ ] Curto/Feminino
+
+**Vestes (3 tipos):**
+- [ ] Túnica Básica
+- [ ] Roupa de Herbalista
+- [ ] Manto do Aventureiro
+
+**Olhos (3 tipos):**
+- [ ] Redondos
+- [ ] Alongados
+- [ ] Fechados
+
+**UI:**
+- [ ] Tela criação de personagem
+
+---
+
+### FASE 3: NARRATIVA E MUNDO (Semanas 11-16)
+**Status:** [ ] Não Iniciado [ ] Em Andamento [ ] Completo
+
+**Tarefas Técnicas:**
+- [ ] Sistema de NPCs e diálogos
+- [ ] 2-3 NPCs com missões
+- [ ] Fragmentos de história ao encontrar pares
+- [ ] Sistema de save game
+- [ ] 2 regiões diferentes
+
+**Checklist Arte FASE 3:**
+- [ ] Mapa mundo sprite
+- [ ] Velho Sábio (sprite)
+- [ ] Curadora Melancólica (sprite)
+- [ ] Guarda Florestal (sprite)
+- [ ] Segunda região (conceito)
+
+---
+
+### FASE 4: POLIMENTO (Semanas 17-20)
+**Status:** [ ] Não Iniciado [ ] Em Andamento [ ] Completo
+
+**Tarefas:**
+- [ ] Poções de aventura (3-4 que afetam gameplay)
+- [ ] Animações de transição
+- [ ] SFX básicos (virar carta, match, erro)
+- [ ] Balanceamento final
+- [ ] Correção de bugs
+
+---
+
+### FASE 5: CONTEÚDO FINAL (Semanas 21-24)
+**Status:** [ ] Não Iniciado [ ] Em Andamento [ ] Completo
+
+**Tarefas:**
+- [ ] 4 regiões totais
+- [ ] 30+ plantas únicas
+- [ ] 15+ receitas de poções
+- [ ] História principal completa
+- [ ] Trilha sonora original
+- [ ] Testes com jogadores externos
+
+---
+
+## 📝 REGISTRO SEMANAL DE PROGRESSO
+
+### Semana 1-2: _________
+**Progresso Técnico:**  
+___________________________________
+
+**Progresso Arte:**  
+___________________________________
+
+**Próximos Passos:**  
+___________________________________
+
+### Semana 3-4: _________
+**Progresso Técnico:**  
+___________________________________
+
+**Progresso Arte:**  
+___________________________________
+
+**Próximos Passos:**  
+___________________________________
+
+### Semana 5-6: _________
+**Progresso Técnico:**  
+___________________________________
+
+**Progresso Arte:**  
+___________________________________
+
+**Próximos Passos:**  
+___________________________________
+
+---
+
+## 🎨 CHECKLIST GERAL DE ARTE
+
+**Prioridade ALTA (MVP):**
+- [ ] 15 cartas da floresta
+- [ ] Tabuleiro floresta
+- [ ] Sprites básicos personagem
+
+**Prioridade MÉDIA:**
+- [ ] Sistema customização completo
+- [ ] Mapa mundo
+- [ ] NPCs principais
+
+**Prioridade BAIXA:**
+- [ ] Todas as animações
+- [ ] Efeitos visuais
+- [ ] Arte de interface final
+
+---
+
+## 🔧 FERRAMENTAS E RECURSOS
+
+**Engine:** ___________  
+**Arte:** Aseprite/GIMP/Outro: ___________  
+**Versionamento:** GitHub  
+**Organização:** Trello/Notion/Outro: ___________
+
+**Recursos Úteis:**
+- Paletas de cor: Lospec.com
+- Referências: Pixel Art communities
+- Tutoriais: ___________
+
+
+---
+
+## 📞 CONTATOS E APOIO
+
+**Comunidades para Feedback:**
+- Reddit: r/pixelart, r/gamedev
+- Discord: Game Dev communities
+- Playtesters: ___________
+
+
+**Notas Importantes:**
+- Teste o jogo TODO dia
+- Comemore cada marco concluído
+- Mantenha o escopo controlado
+- Versione frequentemente
+
+---
+*Documento atualizado em: _________*
+*Próxima revisão: _________*
