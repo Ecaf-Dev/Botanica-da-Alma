@@ -1,0 +1,114 @@
+# GAME DESIGN DOCUMENT (GDD) - HERBARIUM MEMORIAE
+
+**Versão:** 1.0
+**Data:** 28/10/2024
+
+## 📖 VISÃO GERAL
+**Conceito:** Jogo de memória herbalístico com narrativa dramática, crafting e economia dinâmica
+**Gênero:** Puzzle + RPG + Crafting
+**Plataforma:** PC (Windows)
+**Engine:** Godot 4.1
+**Resolução Arte:** 32x32 pixels
+**Estilo:** Pixel Art detalhada
+
+## 🎮 MECÂNICAS PRINCIPAIS
+
+### Loop Principal
+Memória → Coletar Plantas → Crafting → Vender/Progressão/Quests/Auxílio
+
+### Sistema de Memória
+- **Grid:** 4x4, 5x5, 6x6 (por dificuldade)
+- **Turnos:** Fácil: 12 | Médio: 8 | Difícil: 6
+- **Objetivo:** Encontrar pares antes dos turnos acabarem
+
+### Sistema de Crafting
+**Receitas:**
+- Poção de Cura Menor: 2x Raiz de Lumina + 1x Erva do Vale
+- Poção de Regeneração de Mana: 1x Flor Sussurro + 2x Folha de Orvalho
+- Poção da Revelação: 1x Cogumelo Brilhante + 2x Trevo Lunar
+
+**Propósitos:**
+- 💰 Venda (Poção de Cura Menor)
+- 📜 Quests (Poção de Regeneração de Mana)
+- 🎯 Auxílio (Poção da Revelação)
+- 🗺️ Progressão (Poções de acesso)
+
+### Progressão
+**Gatekeeping por Poções:**
+- Região 1 (Floresta): Acesso livre
+- Região 2 (Cavernas): Requer Poção Visão Noturna
+- Região 3 (Pântano): Requer Poção Antiveneno
+- Região 4 (Montanha): Requer Poção Resistência ao Frio
+
+### Economia Dinâmica
+**Fontes de Renda:**
+- Venda de poções
+- Compleção de quests
+
+**Eventos Exemplo:**
+- "Erupção Magística": Poções de Mana +50%, Poções de Cura -25%
+
+## 🌿 CONTEÚDO
+
+### Plantas da Floresta (15)
+1. Raiz de Lumina (Comum)
+2. Flor Sussurro (Comum)
+3. Folha de Orvalho (Comum)
+4. Cogumelo Brilhante (Comum)
+5. Trevo Lunar (Raro)
+6. Vinha Espinhosa (Comum)
+7. Semente Cristal (Raro)
+8. Erva do Vale (Comum)
+9. Musgo Antigo (Comum)
+10. Flor Cardinal (Comum)
+11. Raiz Amarga (Incomum)
+12. Lírio Noturno (Raro)
+13. Samambaia Prateada (Incomum)
+14. Broto de Carvalho (Comum)
+15. Orquídea Selvagem (Raro)
+
+### Poções Planejadas
+- Poção de Cura Menor (Venda)
+- Poção de Regeneração de Mana (Quest)
+- Poção da Revelação (Auxílio)
+- Poção Visão Noturna (Progressão)
+- Poção Antiveneno (Progressão)
+- Poção Resistência ao Frio (Progressão)
+
+## 🎨 ARTE E VISUAIS
+**Estilo:** Pixel Art detalhada
+**Resolução:** 32x32 pixels
+**Paleta:** A definir (16-32 cores)
+
+**Assets Principais:**
+- 15 cartas de plantas
+- Tabuleiro floresta
+- Sprites de personagem customizável
+- Mapa mundo
+- NPCs principais
+
+## 📊 FLUXO DO JOGO
+1. Cidade (Hub principal)
+2. Seleção de Região/Dificuldade
+3. Jogo de Memória (Grid)
+4. Retorno à Cidade
+5. Crafting/Vendas/Quests
+6. Repetir
+
+## 🎯 PRÓXIMOS PASSOS
+
+### Fase 1 - MVP (4 semanas)
+- [ ] Sistema de grid de memória (4x4)
+- [ ] Mecânica de turnos (12/8/6)
+- [ ] 5 plantas básicas + sprites
+- [ ] Sistema de crafting básico
+- [ ] Inventário funcional
+
+### Fase 2 - Expansão
+- [ ] Sistema de NPCs e diálogos
+- [ ] Economia dinâmica
+- [ ] Mais regiões e plantas
+- [ ] Sistema de eventos
+
+---
+**Status:** ✅ GDD BÁSICO COMPLETO

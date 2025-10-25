@@ -26,7 +26,7 @@
 **Tarefas:**
 - [x] Definir engine (Godot/GameMaker/Outro)
 - [x] Configurar GitHub/Git
-- [ ] Documento de Design (GDD) básico
+- [x] Documento de Design (GDD) básico
 - [ ] Definir paleta de cores (16-32 cores)
 - [ ] Referências visiais coletadas
 
