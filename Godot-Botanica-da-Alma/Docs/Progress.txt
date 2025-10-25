@@ -27,8 +27,8 @@
 - [x] Definir engine (Godot/GameMaker/Outro)
 - [x] Configurar GitHub/Git
 - [x] Documento de Design (GDD) básico
-- [ ] Definir paleta de cores (16-32 cores)
-- [ ] Referências visiais coletadas
+- [x] Definir paleta de cores (16-32 cores)
+- [x] Referências visiais coletadas
 
 **Checklist Arte:**
 - [ ] Resolução dos sprites definida
