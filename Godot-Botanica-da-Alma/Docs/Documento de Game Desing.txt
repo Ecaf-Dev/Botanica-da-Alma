@@ -8,8 +8,13 @@
 **Gênero:** Puzzle + RPG + Crafting
 **Plataforma:** PC (Windows)
 **Engine:** Godot 4.1
-**Resolução Arte:** 32x32 pixels
 **Estilo:** Pixel Art detalhada
+
+## RESOLUÇÃO OFICIAL DE ART:
+- Personagens: 32x48 pixels (altura para incluir cabeça/corpo)
+- Plantas/Cartas: 32x32 pixels 
+- UI/Ícones: 16x16 pixels
+- Retratos NPCs: 64x64 pixels
 
 ## 🎮 MECÂNICAS PRINCIPAIS
 
@@ -78,7 +83,7 @@ Memória → Coletar Plantas → Crafting → Vender/Progressão/Quests/Auxílio
 ## 🎨 ARTE E VISUAIS
 **Estilo:** Pixel Art detalhada
 **Resolução:** 32x32 pixels
-**Paleta:** A definir (16-32 cores)
+**Paleta:** Definida, encontra-se no documento de paletas
 
 **Assets Principais:**
 - 15 cartas de plantas
@@ -97,14 +102,28 @@ Memória → Coletar Plantas → Crafting → Vender/Progressão/Quests/Auxílio
 
 ## 🎯 PRÓXIMOS PASSOS
 
-### Fase 1 - MVP (4 semanas)
-- [ ] Sistema de grid de memória (4x4)
+### Fase 1 - MVP - Jogo da memoria funcional
+- [ ] 5 plantas básicas (32x32)
+- [ ] Sistema de grid de memória (4x4, 5x5, 6x6)
+  [ ] Sistema de virar Cartas, desvirar e mathing
 - [ ] Mecânica de turnos (12/8/6)
-- [ ] 5 plantas básicas + sprites
-- [ ] Sistema de crafting básico
+- [ ] Ui da partida: turnos restantes/ dificuldade selecionada / Acesso a bola de inventario
 - [ ] Inventário funcional
+- [ ] Sistema de poções ativas na jogatina(Exemplo, poção da revelação que irá revelar 1 combinação de cartas)
+- [ ] Sistema onde as cartas encontradas são adicioandas como itens do inventario no final da partida!
 
-### Fase 2 - Expansão
+### Fase 2 - Area SandBox, onde o jogador escolhe o que fazer
+- [ ] UI da Cidade
+- [ ] UI do sistema de Crafting
+- [ ] UI do Mapa de viagens(exemplo: Floresta, pantano, montanha etc...)
+- [ ] UI do Mercado de poções, plantas e de receitas
+- [ ] Sistema de navegação da UI, para acessar interfaces
+- [ ] Sistema de crafting
+- [ ] Sistema de viagem, onde o jogador ira escolher o local de tabuleiro e dificuldade para inicair um jogo
+- [ ] Sistema de vendas e compra no mercado
+- [ ] Sistema de Save entre sessões
+
+### Fase 3 - expans]ap
 - [ ] Sistema de NPCs e diálogos
 - [ ] Economia dinâmica
 - [ ] Mais regiões e plantas

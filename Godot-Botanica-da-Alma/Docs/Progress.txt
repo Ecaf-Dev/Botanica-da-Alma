@@ -31,8 +31,8 @@
 - [x] Referências visiais coletadas
 
 **Checklist Arte:**
-- [ ] Resolução dos sprites definida
-- [ ] Estilo de pixel art estabelecido
+- [X] Resolução dos sprites definida
+- [X] Estilo de pixel art estabelecido
 - [ ] Lista de assets priorizada
 
 ---
