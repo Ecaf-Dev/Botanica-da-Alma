@@ -1,0 +1,19 @@
+#1A3C27 - Verde floresta noturna
+#2D5A27 - Verde musgo profundo
+#3E7546 - Verde folha saturado
+#5A8C5D - Verde herbal claro
+
+#3D2B1F - Marrom terra úmida
+#5D4C3D - Marrom casca
+#8B7355 - Marrom claro
+#A38E6D - Bege natural
+
+#4A2C5C - Roxo profundo
+#6D4A97 - Roxo herbal
+#8B6DAF - Lilás brilhante
+#4A77B4 - Azul poção
+
+#B8860B - Dourado enferrujado
+#C45C6A - Vermelho vinho
+#D4AF37 - Amarelo mel
+#E8D8C0 - Off-white (apenas textos)
