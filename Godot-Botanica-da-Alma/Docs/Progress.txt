@@ -31,22 +31,11 @@
 - [x] Referências visiais coletadas
 
 **Checklist Arte:**
-- [X] Resolução dos sprites definida
-- [X] Estilo de pixel art estabelecido
-- [ ] Lista de assets priorizada
+- [x] Resolução dos sprites definida
+- [x] Estilo de pixel art estabelecido
+- [x] Lista de assets priorizada
 
 ---
-
-### FASE 1: MVP BÁSICO (Semanas 3-6)
-**Status:** [ ] Não Iniciado [ ] Em Andamento [ ] Completo
-
-**Tarefas Técnicas:**
-- [ ] Sistema de grid de cartas (4x4)
-- [ ] Mecânica de virar/desvirar cartas
-- [ ] Lógica de matching de pares
-- [ ] Contador de turnos (20 turnos)
-- [ ] Fim de jogo ao zerar turnos
-- [ ] Coleta básica de plantas
 
 **Checklist Arte FASE 1:**
 **Cartas da Floresta (15):**
