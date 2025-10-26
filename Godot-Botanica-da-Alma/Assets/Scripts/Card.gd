@@ -1,44 +1,40 @@
 extends Button
 
-# Estados da carta
 enum EstadoCarta { ABAIXADA, LEVANTADA, ENCONTRADA }
 
 var estado = EstadoCarta.ABAIXADA
-var cor: Color
-var cor_verso = Color.BLACK  # 🔥 COR PRETA PARA O VERSO
+var planta_data: PlantaData
+var texture_verso = preload("res://Assets/Art/Testes/card_verso.png")  # 🔥 CRIE ESTE SPRITE
 
 func _ready():
 	configurar_aparencia()
-	# 🔥 NÃO CHAMA aplicar_estado_abaixada() AQUI - o Grid vai configurar depois
 
 func configurar_aparencia():
 	custom_minimum_size = Vector2(64, 64)
-
-# =============================================================================
-# FUNÇÕES DE CONTROLE DE ESTADO
-# =============================================================================
+	expand_icon = true  # 🔥 IMPORTANTE: Faz o icon preencher o botão
 
 func aplicar_estado_abaixada():
 	estado = EstadoCarta.ABAIXADA
-	modulate = cor_verso  # 🔥 MOSTRA VERSO PRETO
+	icon = texture_verso
 	mouse_filter = Control.MOUSE_FILTER_STOP
-	print("Carta abaixada - mostrando verso preto")
+	print("Carta abaixada - ", planta_data.nome if planta_data else "Sem dados")
 
 func aplicar_estado_levantada():
 	estado = EstadoCarta.LEVANTADA
-	modulate = cor  # 🔥 MOSTRA CONTEÚDO (COR DA PLANTA)
+	icon = planta_data.texture if planta_data else null
 	mouse_filter = Control.MOUSE_FILTER_STOP
-	print("Carta levantada - Cor: ", cor)
+	print("Carta levantada - ", planta_data.nome)
 
 func aplicar_estado_encontrada():
 	estado = EstadoCarta.ENCONTRADA
-	modulate = cor  # 🔥 MANTÉM CONTEÚDO VISÍVEL
-	mouse_filter = Control.MOUSE_FILTER_IGNORE  # 🔥 NÃO CLICÁVEL
-	print("Carta encontrada - Match completo!")
-	
-# =============================================================================
-# FUNÇÕES PÚBLICAS (CHAMADAS PELO GRID)
-# =============================================================================
+	icon = planta_data.texture if planta_data else null
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	print("Carta encontrada - ", planta_data.nome)
+
+# 🔥 FUNÇÃO PARA CONFIGURAR COM PlantaData
+func configurar_com_planta(dados_planta: PlantaData):
+	planta_data = dados_planta
+	aplicar_estado_abaixada()
 
 func virar_carta():
 	if estado == EstadoCarta.ABAIXADA:
@@ -55,28 +51,18 @@ func desvirar_carta():
 func marcar_como_encontrada():
 	aplicar_estado_encontrada()
 
-# 🔥 FUNÇÃO PARA O GRID CONFIGURAR A CARTA
-func configurar_carta(nova_cor: Color):
-	cor = nova_cor
-	aplicar_estado_abaixada()  # 🔥 AGORA SIM CONFIGURA O ESTADO INICIAL
-
-# =============================================================================
-# FUNÇÕES AUXILIARES
-# =============================================================================
-
 func _on_pressed():
 	print("Carta clicada - Estado: ", estado)
 	
 	match estado:
 		EstadoCarta.ABAIXADA:
-			# Só processa cliques se estiver abaixada
 			virar_carta()
 		EstadoCarta.LEVANTADA:
 			print("Carta já está levantada - clique ignorado")
 		EstadoCarta.ENCONTRADA:
 			print("Carta já foi encontrada - clique ignorado")
 
-# 🔥 PROPRIEDADE PARA COMPATIBILIDADE COM O GRID EXISTENTE
+# 🔥 PROPRIEDADES PARA COMPATIBILIDADE
 var virada: bool:
 	get:
 		return estado == EstadoCarta.LEVANTADA || estado == EstadoCarta.ENCONTRADA
