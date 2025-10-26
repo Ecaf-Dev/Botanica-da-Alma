@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://becnuw7hyk7y8"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/GridContainer.gd" id="1_w7gri"]
+
+[node name="root" type="Node2D"]
+
+[node name="BackGround" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="Node2D" parent="."]
+script = ExtResource("1_w7gri")
+
+[node name="UI" type="CanvasLayer" parent="."]
