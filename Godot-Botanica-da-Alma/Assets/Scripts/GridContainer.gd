@@ -1,8 +1,8 @@
 extends Node2D
 
 # Configurações
-var grid_x = 4
-var grid_y = 4
+var grid_x = 6
+var grid_y = 6
 var grid_size = Vector2(grid_x, grid_y)
 var card_scene = preload("res://Cenas/Card.tscn")
 var card_size = Vector2(80, 80)  # 🔥 AUMENTEI PARA 80x80 PARA CABER SPRITES
