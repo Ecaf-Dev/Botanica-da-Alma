@@ -39,21 +39,21 @@
 
 **Checklist Arte FASE 1:**
 **Cartas da Floresta (15):**
-- [ ] Raiz de Lumina
-- [ ] Flor Sussurro
-- [ ] Folha de Orvalho
-- [ ] Cogumelo Brilhante
-- [ ] Trevo Lunar
-- [ ] Vinha Espinhosa
-- [ ] Semente Cristal
-- [ ] Erva do Vale
-- [ ] Musgo Antigo
-- [ ] Flor Cardinal
-- [ ] Raiz Amarga
-- [ ] Lírio Noturno
-- [ ] Samambaia Prateada
-- [ ] Broto de Carvalho
-- [ ] Orquídea Selvagem
+- [x] Raiz de Lumina
+- [x] Flor Sussurro
+- [x] Folha de Orvalho
+- [x] Cogumelo Brilhante
+- [x] Trevo Lunar
+- [x] Vinha Espinhosa
+- [x] Semente Cristal
+- [x] Erva do Vale
+- [x] Musgo Antigo
+- [x] Flor Cardinal
+- [x] Raiz Amarga
+- [x] Lírio Noturno
+- [x] Samambaia Prateada
+- [x] Broto de Carvalho
+- [x] Orquídea Selvagem
 
 **Ambiente:**
 - [ ] Tabuleiro floresta (cenário)
