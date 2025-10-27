@@ -107,6 +107,7 @@ Memória → Coletar Plantas → Crafting → Vender/Progressão/Quests/Auxílio
 - [x] Sistema de grid de memória (4x4, 5x5, 6x6)
   [x] Sistema de virar Cartas, desvirar e mathing
 - [ ] Mecânica de turnos (12/8/6)
+- [ ] Sistema de vitória e derrota
 - [ ] Ui da partida: turnos restantes/ dificuldade selecionada / Acesso a bola de inventario
 - [ ] Inventário funcional
 - [ ] Sistema de poções ativas na jogatina(Exemplo, poção da revelação que irá revelar 1 combinação de cartas)
