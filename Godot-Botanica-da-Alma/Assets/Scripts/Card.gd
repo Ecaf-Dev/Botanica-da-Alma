@@ -4,7 +4,7 @@ enum EstadoCarta { ABAIXADA, LEVANTADA, ENCONTRADA }
 
 var estado = EstadoCarta.ABAIXADA
 var planta_data: PlantaData
-var texture_verso = preload("res://Assets/Art/Testes/card_verso.png")  # 🔥 CRIE ESTE SPRITE
+var texture_verso = preload("res://Assets/Art/Plantas/card_verso.png")  # 🔥 CRIE ESTE SPRITE
 
 func _ready():
 	configurar_aparencia()

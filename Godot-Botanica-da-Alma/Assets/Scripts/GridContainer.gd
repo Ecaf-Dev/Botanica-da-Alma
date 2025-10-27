@@ -28,63 +28,166 @@ func limpar_grid():
 	for child in get_children():
 		child.queue_free()
 
+
 func criar_banco_plantas() -> Array:
 	var plantas = []
 	
-	# 🔥 CARREGA SEUS SPRITES - AJUSTE OS CAMINHOS!
-	var sprite_planta1 = load("res://Assets/Art/Testes/planta1.png")
-	var sprite_planta2 = load("res://Assets/Art/Testes/planta2.png")
-	var sprite_planta3 = load("res://Assets/Art/Testes/planta3.png")
-	var sprite_planta4 = load("res://Assets/Art/Testes/planta4.png")
-	var sprite_planta5 = load("res://Assets/Art/Testes/planta5.png")
+	# 🔥 CARREGA SEUS 15 SPRITES OFICIAIS
+	var sprites = {
+		"raiz_lumina": load("res://Assets/Art/Plantas/raiz_lumina.png"),
+		"flor_sussurro": load("res://Assets/Art/Plantas/flor_sussurro.png"),
+		"folha_orvalho": load("res://Assets/Art/Plantas/folha_orvalho.png"),
+		"cogumelo_brilhante": load("res://Assets/Art/Plantas/cogumelo_brilhante.png"),
+		"trevo_lunar": load("res://Assets/Art/Plantas/trevo_lunar.png"),
+		"vinha_espinhosa": load("res://Assets/Art/Plantas/vinha_espinhosa.png"),
+		"semente_cristal": load("res://Assets/Art/Plantas/semente_cristal.png"),
+		"erva_vale": load("res://Assets/Art/Plantas/erva_vale.png"),
+		"musgo_antigo": load("res://Assets/Art/Plantas/musgo_antigo.png"),
+		"flor_cardinal": load("res://Assets/Art/Plantas/flor_cardinal.png"),
+		"raiz_amarga": load("res://Assets/Art/Plantas/raiz_amarga.png"),
+		"lirio_noturno": load("res://Assets/Art/Plantas/lirio_noturno.png"),
+		"samambaia_prateada": load("res://Assets/Art/Plantas/samambaia_prateada.png"),
+		"broto_carvalho": load("res://Assets/Art/Plantas/broto_carvalho.png"),
+		"orquidea_selvagem": load("res://Assets/Art/Plantas/orquidea_selvagem.png")
+	}
 	
-	# 🔥 CRIA AS PLANTAS COM SEUS SPRITES
+	# 🔥 CRIA AS 15 PLANTAS OFICIAIS
 	plantas.append(PlantaData.new(
-		"planta_1", 
+		"raiz_lumina", 
 		"Raiz de Lumina", 
 		"COMUM", 
-		sprite_planta1,
+		sprites["raiz_lumina"],
 		"Uma raiz que brilha suavemente no escuro",
 		"FLORESTA"
 	))
 	
 	plantas.append(PlantaData.new(
-		"planta_2", 
+		"flor_sussurro", 
 		"Flor Sussurro", 
 		"COMUM", 
-		sprite_planta2,
+		sprites["flor_sussurro"],
 		"Emite um sussurro suave ao vento",
 		"FLORESTA"
 	))
 	
 	plantas.append(PlantaData.new(
-		"planta_3", 
+		"folha_orvalho", 
+		"Folha de Orvalho", 
+		"COMUM", 
+		sprites["folha_orvalho"],
+		"Conserva gotas de orvalho matinal",
+		"FLORESTA"
+	))
+	
+	plantas.append(PlantaData.new(
+		"cogumelo_brilhante", 
+		"Cogumelo Brilhante", 
+		"INCOMUM", 
+		sprites["cogumelo_brilhante"],
+		"Brilha com uma luz azulada na escuridão",
+		"FLORESTA"
+	))
+	
+	plantas.append(PlantaData.new(
+		"trevo_lunar", 
 		"Trevo Lunar", 
 		"RARO", 
-		sprite_planta3,
+		sprites["trevo_lunar"],
 		"Só floresce sob a luz da lua cheia",
 		"FLORESTA"
 	))
 	
 	plantas.append(PlantaData.new(
-		"planta_4", 
+		"vinha_espinhosa", 
+		"Vinha Espinhosa", 
+		"COMUM", 
+		sprites["vinha_espinhosa"],
+		"Cresce rapidamente e se defende com espinhos",
+		"FLORESTA"
+	))
+	
+	plantas.append(PlantaData.new(
+		"semente_cristal", 
+		"Semente Cristal", 
+		"RARO", 
+		sprites["semente_cristal"],
+		"Brilha como cristal sob a luz do sol",
+		"FLORESTA"
+	))
+	
+	plantas.append(PlantaData.new(
+		"erva_vale", 
 		"Erva do Vale", 
 		"COMUM", 
-		sprite_planta4,
+		sprites["erva_vale"],
 		"Cresce nos vales mais profundos da floresta",
 		"FLORESTA"
 	))
 	
 	plantas.append(PlantaData.new(
-		"planta_5", 
-		"Cogumelo Brilhante", 
-		"INCOMUM", 
-		sprite_planta5,
-		"Brilha com uma luz azulada na escuridão",
+		"musgo_antigo", 
+		"Musgo Antigo", 
+		"COMUM", 
+		sprites["musgo_antigo"],
+		"Carrega a sabedoria das árvores ancestrais",
 		"FLORESTA"
 	))
 	
-	print("Banco de plantas carregado: ", plantas.size(), " plantas")
+	plantas.append(PlantaData.new(
+		"flor_cardinal", 
+		"Flor Cardinal", 
+		"INCOMUM", 
+		sprites["flor_cardinal"],
+		"Sempre aponta na direção norte",
+		"FLORESTA"
+	))
+	
+	plantas.append(PlantaData.new(
+		"raiz_amarga", 
+		"Raiz Amarga", 
+		"INCOMUM", 
+		sprites["raiz_amarga"],
+		"Tem propriedades medicinais poderosas",
+		"FLORESTA"
+	))
+	
+	plantas.append(PlantaData.new(
+		"lirio_noturno", 
+		"Lírio Noturno", 
+		"RARO", 
+		sprites["lirio_noturno"],
+		"Floresce apenas durante a noite",
+		"FLORESTA"
+	))
+	
+	plantas.append(PlantaData.new(
+		"samambaia_prateada", 
+		"Samambaia Prateada", 
+		"INCOMUM", 
+		sprites["samambaia_prateada"],
+		"Suas folhas refletem a luz como prata",
+		"FLORESTA"
+	))
+	
+	plantas.append(PlantaData.new(
+		"broto_carvalho", 
+		"Broto de Carvalho", 
+		"COMUM", 
+		sprites["broto_carvalho"],
+		"O início de uma grande árvore ancestral",
+		"FLORESTA"
+	))
+	
+	plantas.append(PlantaData.new(
+		"orquidea_selvagem", 
+		"Orquídea Selvagem", 
+		"RARO", 
+		sprites["orquidea_selvagem"],
+		"Rara e bela, encontrada apenas em locais secretos",
+		"FLORESTA"
+	))
+	
+	print("🌿 Banco oficial carregado: ", plantas.size(), " plantas")
 	return plantas
 
 func gerar_pares_plantas() -> Array:
