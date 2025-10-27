@@ -1,24 +1,27 @@
 extends Node2D
 
 # Configurações
-var grid_x = 6
-var grid_y = 6
+var grid_x = 2
+var grid_y = 2
 var grid_size = Vector2(grid_x, grid_y)
 var card_scene = preload("res://Cenas/Card.tscn")
 var card_size = Vector2(80, 80)  # 🔥 AUMENTEI PARA 80x80 PARA CABER SPRITES
 var spacing = 10
+
+#dificuldade do jogo
+enum Dificuldade {FACIL, MEDIO, DIFICIL}
+var dificuldade: int = Dificuldade.FACIL
 
 # Estado do jogo
 var carta_selecionada = null
 var cliques_travados = false
 
 func _ready():
-	criar_grid()
+	definir_dificuldade()
 
 # =============================================================================
 # FUNÇÕES DE CONFIGURAÇÃO DO GRID
 # =============================================================================
-
 func criar_grid():
 	limpar_grid()
 	var plantas = gerar_pares_plantas()
@@ -27,6 +30,21 @@ func criar_grid():
 func limpar_grid():
 	for child in get_children():
 		child.queue_free()
+
+func definir_dificuldade():
+	match dificuldade:
+		Dificuldade.FACIL:
+			grid_x = 4
+			grid_y = 4
+		Dificuldade.MEDIO:
+			grid_x = 6
+			grid_y = 6
+		Dificuldade.DIFICIL:
+			grid_x = 8
+			grid_y = 8
+	
+	grid_size = Vector2(grid_x, grid_y)
+	criar_grid()
 
 
 func criar_banco_plantas() -> Array:
