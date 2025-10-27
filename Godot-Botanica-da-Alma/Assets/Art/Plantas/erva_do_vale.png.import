@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce2g1ya3uboqn"
-path="res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"
+uid="uid://bkctsqmctvyna"
+path="res://.godot/imported/erva_do_vale.png-f37e31a3260445db7b55d4bcf737d73e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Plantas/vinha espinhosa.png"
-dest_files=["res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"]
+source_file="res://Assets/Art/Plantas/erva_do_vale.png"
+dest_files=["res://.godot/imported/erva_do_vale.png-f37e31a3260445db7b55d4bcf737d73e.ctex"]
 
 [params]
 

@@ -1,0 +1,124 @@
+{
+	"plantas": [
+		{
+			"id": "raiz_lumina",
+			"nome": "Raiz de Lumina",
+			"raridade": "COMUM",
+			"texture_path": "res://Assets/Art/Plantas/raiz_lumina.png",
+			"descricao": "Uma raiz que brilha suavemente no escuro",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "flor_sussurro",
+			"nome": "Flor Sussurro", 
+			"raridade": "COMUM",
+			"texture_path": "res://Assets/Art/Plantas/flor_sussurro.png",
+			"descricao": "Emite um sussurro suave ao vento",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "folha_orvalho",
+			"nome": "Folha de Orvalho",
+			"raridade": "COMUM",
+			"texture_path": "res://Assets/Art/Plantas/folha_orvalho.png",
+			"descricao": "Conserva gotas de orvalho matinal",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "cogumelo_brilhante",
+			"nome": "Cogumelo Brilhante",
+			"raridade": "INCOMUM", 
+			"texture_path": "res://Assets/Art/Plantas/cogumelo_brilhante.png",
+			"descricao": "Brilha com uma luz azulada na escuridão",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "trevo_lunar",
+			"nome": "Trevo Lunar",
+			"raridade": "RARO",
+			"texture_path": "res://Assets/Art/Plantas/trevo_lunar.png",
+			"descricao": "Só floresce sob a luz da lua cheia",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "vinha_espinhosa",
+			"nome": "Vinha Espinhosa",
+			"raridade": "COMUM",
+			"texture_path": "res://Assets/Art/Plantas/vinha_espinhosa.png",
+			"descricao": "Cresce rapidamente e se defende com espinhos",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "semente_cristal",
+			"nome": "Semente Cristal",
+			"raridade": "RARO",
+			"texture_path": "res://Assets/Art/Plantas/semente_cristal.png",
+			"descricao": "Brilha como cristal sob a luz do sol", 
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "erva_vale",
+			"nome": "Erva do Vale",
+			"raridade": "COMUM",
+			"texture_path": "res://Assets/Art/Plantas/erva_vale.png",
+			"descricao": "Cresce nos vales mais profundos da floresta",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "musgo_antigo",
+			"nome": "Musgo Antigo",
+			"raridade": "COMUM",
+			"texture_path": "res://Assets/Art/Plantas/musgo_antigo.png",
+			"descricao": "Carrega a sabedoria das árvores ancestrais",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "flor_cardinal",
+			"nome": "Flor Cardinal",
+			"raridade": "INCOMUM",
+			"texture_path": "res://Assets/Art/Plantas/flor_cardinal.png",
+			"descricao": "Sempre aponta na direção norte",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "raiz_amarga", 
+			"nome": "Raiz Amarga",
+			"raridade": "INCOMUM",
+			"texture_path": "res://Assets/Art/Plantas/raiz_amarga.png",
+			"descricao": "Tem propriedades medicinais poderosas",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "lirio_noturno",
+			"nome": "Lírio Noturno",
+			"raridade": "RARO", 
+			"texture_path": "res://Assets/Art/Plantas/lirio_noturno.png",
+			"descricao": "Floresce apenas durante a noite",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "samambaia_prateada",
+			"nome": "Samambaia Prateada",
+			"raridade": "INCOMUM",
+			"texture_path": "res://Assets/Art/Plantas/samambaia_prateada.png",
+			"descricao": "Suas folhas refletem a luz como prata",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "broto_carvalho",
+			"nome": "Broto de Carvalho", 
+			"raridade": "COMUM",
+			"texture_path": "res://Assets/Art/Plantas/broto_carvalho.png",
+			"descricao": "O início de uma grande árvore ancestral",
+			"regiao": "FLORESTA"
+		},
+		{
+			"id": "orquidea_selvagem",
+			"nome": "Orquídea Selvagem",
+			"raridade": "RARO",
+			"texture_path": "res://Assets/Art/Plantas/orquidea_selvagem.png",
+			"descricao": "Rara e bela, encontrada apenas em locais secretos",
+			"regiao": "FLORESTA"
+		}
+	]
+}

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce2g1ya3uboqn"
-path="res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"
+uid="uid://dr5leov6k6bwy"
+path="res://.godot/imported/raiz_amarga.png-9c882ae2c4509e1c413fa4212a37cd36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Plantas/vinha espinhosa.png"
-dest_files=["res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"]
+source_file="res://Assets/Art/Plantas/raiz_amarga.png"
+dest_files=["res://.godot/imported/raiz_amarga.png-9c882ae2c4509e1c413fa4212a37cd36.ctex"]
 
 [params]
 

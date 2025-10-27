@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce2g1ya3uboqn"
-path="res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"
+uid="uid://1ag1ac3u65lg"
+path="res://.godot/imported/musgo_antigo.png-a5268f408cf23deb018d72cc95fcd4af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Plantas/vinha espinhosa.png"
-dest_files=["res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"]
+source_file="res://Assets/Art/Plantas/musgo_antigo.png"
+dest_files=["res://.godot/imported/musgo_antigo.png-a5268f408cf23deb018d72cc95fcd4af.ctex"]
 
 [params]
 

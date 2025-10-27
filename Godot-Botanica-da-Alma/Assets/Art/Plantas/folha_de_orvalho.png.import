@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce2g1ya3uboqn"
-path="res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"
+uid="uid://bliafegdairtr"
+path="res://.godot/imported/folha_de_orvalho.png-544f1e81406efb111b43c3061975e9fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Plantas/vinha espinhosa.png"
-dest_files=["res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"]
+source_file="res://Assets/Art/Plantas/folha_de_orvalho.png"
+dest_files=["res://.godot/imported/folha_de_orvalho.png-544f1e81406efb111b43c3061975e9fd.ctex"]
 
 [params]
 

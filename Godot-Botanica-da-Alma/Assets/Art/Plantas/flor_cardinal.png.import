@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce2g1ya3uboqn"
-path="res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"
+uid="uid://df3nm6g07a11m"
+path="res://.godot/imported/flor_cardinal.png-49b5dae6c6704f407c3fa6ccf46e9fdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Plantas/vinha espinhosa.png"
-dest_files=["res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"]
+source_file="res://Assets/Art/Plantas/flor_cardinal.png"
+dest_files=["res://.godot/imported/flor_cardinal.png-49b5dae6c6704f407c3fa6ccf46e9fdc.ctex"]
 
 [params]
 

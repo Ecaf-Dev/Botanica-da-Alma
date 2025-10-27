@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce2g1ya3uboqn"
-path="res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"
+uid="uid://dea5ebm2658tw"
+path="res://.godot/imported/semente_cristal.png-5367aadeabceb9c936dfd0d4aeb22fa4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Plantas/vinha espinhosa.png"
-dest_files=["res://.godot/imported/vinha espinhosa.png-c61de432d1d22f85f42d45b07dca7c9f.ctex"]
+source_file="res://Assets/Art/Plantas/semente_cristal.png"
+dest_files=["res://.godot/imported/semente_cristal.png-5367aadeabceb9c936dfd0d4aeb22fa4.ctex"]
 
 [params]
 
