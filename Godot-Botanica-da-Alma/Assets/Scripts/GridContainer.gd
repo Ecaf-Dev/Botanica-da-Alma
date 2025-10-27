@@ -11,6 +11,8 @@ var spacing = 10
 #dificuldade do jogo
 enum Dificuldade {FACIL, MEDIO, DIFICIL}
 var dificuldade: int = Dificuldade.FACIL
+var turnos_maximos: int
+var turnos_restantes: int
 
 # Estado do jogo
 var carta_selecionada = null
@@ -36,13 +38,16 @@ func definir_dificuldade():
 		Dificuldade.FACIL:
 			grid_x = 4
 			grid_y = 4
+			turnos_maximos = 12
 		Dificuldade.MEDIO:
 			grid_x = 6
 			grid_y = 6
+			turnos_maximos = 8
 		Dificuldade.DIFICIL:
 			grid_x = 8
 			grid_y = 8
-	
+			turnos_maximos = 6
+	turnos_restantes = turnos_maximos
 	grid_size = Vector2(grid_x, grid_y)
 	criar_grid()
 
@@ -122,7 +127,7 @@ func selecionar_segunda_carta(carta):
 	
 	print("Segunda carta selecionada: ", carta.planta_data.nome)
 	await get_tree().create_timer(0.2).timeout
-	
+	consumir_turno()
 	verificar_match(carta)
 
 # =============================================================================
@@ -145,6 +150,7 @@ func processar_match_encontrado(segunda_carta):
 	destravar_cliques()
 
 func processar_match_falhou(segunda_carta):
+	
 	print("❌ Não é match: ", carta_selecionada.planta_data.nome, " != ", segunda_carta.planta_data.nome)
 	await get_tree().create_timer(0.8).timeout
 	
@@ -154,6 +160,11 @@ func processar_match_falhou(segunda_carta):
 	limpar_selecao()
 	destravar_cliques()
 
+func consumir_turno():
+	turnos_restantes -= 1
+	print("Turnos diminuido, restam: ", turnos_restantes)
+	if turnos_restantes <= 0:
+		print("Derrota")
 # =============================================================================
 # FUNÇÕES AUXILIARES
 # =============================================================================
