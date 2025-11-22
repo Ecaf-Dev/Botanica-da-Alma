@@ -1,0 +1,8 @@
+{
+  "tabuleiros": {
+	"floresta": {
+	  "nome": "Floresta",
+	  "background": "res://Assets/Art/Tabuleiros/limites_da_floresta.png",
+	}
+  }
+}
