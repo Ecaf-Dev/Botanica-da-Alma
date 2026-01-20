@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://becnuw7hyk7y8"]
+[gd_scene load_steps=3 format=3 uid="uid://becnuw7hyk7y8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/GridContainer.gd" id="1_w7gri"]
+[ext_resource type="AudioStream" uid="uid://dhneoh5xup2tx" path="res://Assets/Art/Musicas/background.wav" id="2_xeqlh"]
 
 [node name="root" type="Node2D"]
 
@@ -11,3 +12,10 @@ color = Color(0.596078, 1, 1, 0.313726)
 
 [node name="GridContainer" type="Node2D" parent="."]
 script = ExtResource("1_w7gri")
+
+[node name="BackgroundAudio" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BackgroundAudio"]
+stream = ExtResource("2_xeqlh")
+volume_db = -11.244
+autoplay = true
