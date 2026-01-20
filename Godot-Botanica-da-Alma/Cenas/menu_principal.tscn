@@ -41,6 +41,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Iniciar"
 
+[node name="BotaoDificuldade" type="Button" parent="BackGround/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Fácil"
+
 [node name="Sair" type="Button" parent="BackGround/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
@@ -48,4 +54,5 @@ theme_override_font_sizes/font_size = 24
 text = "Sair"
 
 [connection signal="pressed" from="BackGround/CenterContainer/VBoxContainer/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="BackGround/CenterContainer/VBoxContainer/BotaoDificuldade" to="." method="_on_botao_dificuldade_pressed"]
 [connection signal="pressed" from="BackGround/CenterContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]

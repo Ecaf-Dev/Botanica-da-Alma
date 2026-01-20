@@ -1,8 +1,8 @@
 extends Node2D
 
 # Configurações
-var grid_x = 6
-var grid_y = 6
+var grid_x = 0
+var grid_y = 0
 var grid_size = Vector2(grid_x, grid_y)
 var card_scene = preload("res://Cenas/Card.tscn")
 var card_size = Vector2(80, 80)
@@ -20,6 +20,8 @@ enum EstadoDificuldade { FACIL, MEDIO, DIFICIL }
 var dificuldade_atual: EstadoDificuldade = EstadoDificuldade.FACIL
 
 func _ready():
+	dificuldade_atual = Global.dificuldade_selecionada as EstadoDificuldade
+	
 	carregar_background()
 	definir_tamanho_do_grid_enum()  # 🔥 CHAMA A VERSÃO COM ENUM
 	calcular_tamanho_dinamico()
@@ -103,7 +105,7 @@ func instanciar_carta():
 	return nova_carta
 func configurar_carta(carta, planta_data: PlantaData, indice: int):
 	var pos_x = indice % int(grid_size.x)
-	var pos_y = int(indice / int(grid_size.x))
+	var pos_y = indice / int(grid_size.x)
 
 	var offset_x = get_meta("offset_x", 0)
 	var offset_y = get_meta("offset_y", 0)

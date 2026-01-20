@@ -14,3 +14,12 @@ config/name="Botanica da Alma"
 run/main_scene="res://Cenas/menu_principal.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Assets/Scripts/Global.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
