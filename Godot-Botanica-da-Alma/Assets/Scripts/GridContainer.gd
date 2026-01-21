@@ -42,8 +42,8 @@ func criar_grid():
 func definir_tamanho_do_grid_enum():
 	match dificuldade_atual:
 		EstadoDificuldade.FACIL:
-			grid_x = 2
-			grid_y = 2
+			grid_x = 4
+			grid_y = 4
 		EstadoDificuldade.MEDIO:
 			grid_x = 6
 			grid_y = 6
