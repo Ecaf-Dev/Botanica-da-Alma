@@ -31,3 +31,59 @@ script = ExtResource("1_w7gri")
 stream = ExtResource("2_xeqlh")
 volume_db = -11.244
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TelaVitoria" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PetalasVitoria" type="CPUParticles2D" parent="CanvasLayer/TelaVitoria"]
+position = Vector2(588, -2)
+amount = 40
+lifetime = 4.0
+preprocess = 2.0
+emission_shape = 3
+emission_rect_extents = Vector2(600, 1)
+spread = 20.31
+gravity = Vector2(0, 80)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+color = Color(1, 0.572549, 1, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/TelaVitoria"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/TelaVitoria/CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TelaVitoria/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/TelaVitoria/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.721569, 0.717647, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "VITORIA"
+
+[node name="VoltarMenu" type="Button" parent="CanvasLayer/TelaVitoria/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "MENU"
+
+[connection signal="pressed" from="CanvasLayer/TelaVitoria/CenterContainer/VBoxContainer/VoltarMenu" to="GridContainer" method="_on_voltar_menu_pressed"]

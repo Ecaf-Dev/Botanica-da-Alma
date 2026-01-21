@@ -12,6 +12,8 @@ var spacing = 10
 var carta_selecionada = null
 var cliques_travados = false
 var background_node: ColorRect
+var total_pares: int = 0
+var pares_encontrados: int = 0
 
 # Controle de dificuldade - ESCOLHA UMA DAS OPÇÕES ABAIXO:
 
@@ -40,8 +42,8 @@ func criar_grid():
 func definir_tamanho_do_grid_enum():
 	match dificuldade_atual:
 		EstadoDificuldade.FACIL:
-			grid_x = 4
-			grid_y = 4
+			grid_x = 2
+			grid_y = 2
 		EstadoDificuldade.MEDIO:
 			grid_x = 6
 			grid_y = 6
@@ -50,6 +52,8 @@ func definir_tamanho_do_grid_enum():
 			grid_y = 8
 	
 	grid_size = Vector2(grid_x, grid_y)
+	total_pares = (grid_x * grid_y) / 2
+	pares_encontrados = 0
 	print("🎯 Dificuldade: ", dificuldade_atual, " - Grid: ", grid_size)
 
 # 🔥 FUNÇÃO PARA MUDAR DIFICULDADE DURANTE O JOGO
@@ -264,8 +268,42 @@ func processar_match_encontrado(segunda_carta):
 	carta_selecionada.marcar_como_encontrada()
 	segunda_carta.marcar_como_encontrada()
 	
+	pares_encontrados += 1
+	
+	if pares_encontrados == total_pares:
+		exibir_vitoria()
+	
 	limpar_selecao()
 	destravar_cliques()
+
+func exibir_vitoria():
+	print("🏆 O jogador venceu!")
+	
+	var tela = $"../CanvasLayer/TelaVitoria"
+	var petalas = tela.get_node("PetalasVitoria") # Busca o nó das partículas
+	
+	# 1. Preparamos a tela antes de mostrar
+	tela.modulate.a = 0.0      # Deixa totalmente transparente
+	tela.scale = Vector2(0.8, 0.8) # Começa um pouco menor
+	tela.pivot_offset = tela.size / 2 # Garante que cresça pelo centro
+	tela.visible = true
+	
+	petalas.emitting = true
+	
+	# 2. Criamos a animação (Tween)
+	var tween = get_tree().create_tween()
+	
+	# Faz a opacidade ir para 1 (opaco) e o tamanho para 1 (original) em 0.5 segundos
+	tween.set_parallel(true) # Faz as duas animações abaixo rodarem juntas
+	tween.tween_property(tela, "modulate:a", 1.0, 0.5)
+	tween.tween_property(tela, "scale", Vector2(1.0, 1.0), 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+# Conecte o botão "Jogar Novamente" a esta função:
+func _on_reiniciar_pressed():
+	get_tree().reload_current_scene()
+
+# Conecte o botão "Menu Principal" a esta função:
+func _on_voltar_menu_pressed():
+	get_tree().change_scene_to_file("res://Cenas/menu_principal.tscn")
 
 func processar_match_falhou(segunda_carta):
 	print("❌ Não é match: ", carta_selecionada.planta_data.nome, " != ", segunda_carta.planta_data.nome)
