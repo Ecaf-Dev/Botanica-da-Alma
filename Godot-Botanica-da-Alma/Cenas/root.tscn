@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://becnuw7hyk7y8"]
 
+[ext_resource type="Texture2D" uid="uid://bnj2x5yl5xi1a" path="res://Assets/Art/Tabuleiros/FLORESTA.png" id="1_bql6s"]
 [ext_resource type="Script" path="res://Assets/Scripts/GridContainer.gd" id="1_w7gri"]
 [ext_resource type="AudioStream" uid="uid://dhneoh5xup2tx" path="res://Assets/Art/Musicas/background.wav" id="2_xeqlh"]
-[ext_resource type="Texture2D" uid="uid://bnj2x5yl5xi1a" path="res://Assets/Art/Tabuleiros/limites_da_floresta.png" id="3_gnj2e"]
 
 [node name="root" type="Control"]
 layout_mode = 3
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_gnj2e")
+texture = ExtResource("1_bql6s")
 expand_mode = 1
 
 [node name="GridContainer" type="Node2D" parent="."]

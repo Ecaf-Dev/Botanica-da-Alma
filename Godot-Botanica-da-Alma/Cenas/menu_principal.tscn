@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3qjlyr2fk64t"]
 
 [ext_resource type="Script" path="res://MenuPrincipal.gd" id="1_7cyqc"]
-[ext_resource type="Texture2D" uid="uid://bnj2x5yl5xi1a" path="res://Assets/Art/Tabuleiros/limites_da_floresta.png" id="2_hr8ev"]
+[ext_resource type="Texture2D" uid="uid://bnj2x5yl5xi1a" path="res://Assets/Art/Tabuleiros/FLORESTA.png" id="2_4n4ke"]
 
 [node name="MenuPrincipal" type="Control"]
 layout_mode = 3
@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hr8ev")
+texture = ExtResource("2_4n4ke")
 expand_mode = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="BackGround"]

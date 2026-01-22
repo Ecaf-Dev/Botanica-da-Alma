@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnj2x5yl5xi1a"
-path="res://.godot/imported/limites_da_floresta.png-bc92128446cb6740a4e04cbd23ba9640.ctex"
+uid="uid://culbpsvktfc7u"
+path="res://.godot/imported/grama_azul.jpg-5536a6cd6c94cac726077f9fc1e0693e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Tabuleiros/limites_da_floresta.png"
-dest_files=["res://.godot/imported/limites_da_floresta.png-bc92128446cb6740a4e04cbd23ba9640.ctex"]
+source_file="res://Assets/Art/Plantas/grama_azul.jpg"
+dest_files=["res://.godot/imported/grama_azul.jpg-5536a6cd6c94cac726077f9fc1e0693e.ctex"]
 
 [params]
 

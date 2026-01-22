@@ -119,6 +119,14 @@
 			"texture_path": "res://Assets/Art/Plantas/orquidea_selvagem.png",
 			"descricao": "Rara e bela, encontrada apenas em locais secretos",
 			"regiao": "FLORESTA"
+		},
+		{
+			"id": "GRAMA_AZUL",
+			"nome": "GRAMA_AZUL",
+			"raridade": "COMUM",
+			"texture_path": "res://Assets/Art/Plantas/grama_azul.png",
+			"descricao": "A grama que se espalha pela base da floresta, rica em mana",
+			"regiao": "FLORESTAENCANTANDA"
 		}
 	]
 }

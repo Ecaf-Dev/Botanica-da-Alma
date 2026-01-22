@@ -68,7 +68,22 @@ func limpar_grid():
 		child.queue_free()
 
 func criar_banco_plantas() -> Array:
-	return GerenciadorPlantas.carregar_plantas()
+	# 1. Pega a lista bruta do seu Gerenciador
+	var todas = GerenciadorPlantas.carregar_plantas()
+	
+	# 2. Filtra para manter apenas o bioma selecionado no Mapa
+	# Use o nome da variável que você definiu no Global (ex: bioma_selecionado_provisorio)
+	var banco_filtrado = todas.filter(func(p): 
+		if(Global.bioma_selecionado == 0):
+			
+			return p.regiao == Global.bioma_selecionado_provisorio
+	)
+	
+	# Fallback caso o filtro falhe (opcional mas seguro)
+	if banco_filtrado.is_empty():
+		print("⚠️ Erro: Bioma '", Global.bioma_selecionado_provisorio, "' não encontrado no JSON. Usando banco completo.")
+		
+	return banco_filtrado
 	
 func gerar_pares_plantas() -> Array:
 	var total_cartas = grid_size.x * grid_size.y
@@ -245,7 +260,9 @@ func carregar_background():
 	background_node = get_node("../BackGround") as ColorRect
 	
 	if background_node:
-		var tabuleiro_data = GerenciadorTabuleiros.carregar_tabuleiro("floresta")
+	
+		var tabuleiro_data = GerenciadorTabuleiros.carregar_tabuleiro(Global.bioma_selecionado_provisorio)
+		
 		if not tabuleiro_data.is_empty():
 			# Cria TextureRect como filho do ColorRect
 			var texture_rect = TextureRect.new()
