@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://diejuubxxsxhe" path="res://Assets/Art/Mapas/Mapa do mundo/MapaMundo.png" id="1_7i378"]
 [ext_resource type="Texture2D" uid="uid://rm5iu3xc4guh" path="res://Assets/Art/Testes/Gemini_Generated_Image_jqtpetjqtpetjqtp.png" id="2_ib5hv"]
 
-[node name="Control" type="Control"]
+[node name="Control(Mapa_Regional_1)" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
