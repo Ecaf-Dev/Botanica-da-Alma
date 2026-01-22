@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Botanica da Alma"
-run/main_scene="res://Cenas/menu_principal.tscn"
+run/main_scene="res://Cenas/MapaRegional.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 

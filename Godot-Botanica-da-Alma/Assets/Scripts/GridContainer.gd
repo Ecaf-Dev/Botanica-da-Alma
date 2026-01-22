@@ -74,30 +74,65 @@ func gerar_pares_plantas() -> Array:
 	var total_cartas = grid_size.x * grid_size.y
 	var cartas = []
 	
+	# Presumo que esta função já retorne apenas as plantas do bioma atual
 	var banco_plantas = criar_banco_plantas()
 	
-	# Calcula quantos pares de cada planta
 	var cartas_necessarias = total_cartas
-	var planta_index = 0
 	
 	while cartas_necessarias > 0:
-		var planta_atual = banco_plantas[planta_index % banco_plantas.size()]
-		
-		# Adiciona UM par (2 cartas) desta planta
-		cartas.append(planta_atual)
-		cartas.append(planta_atual)
+		# --- A MUDANÇA ESTÁ AQUI ---
+		# Em vez de seguir a ordem do banco, sorteamos uma planta baseada na dificuldade
+		var planta_sorteada = sortear_planta_por_probabilidade(banco_plantas)
+		print(planta_sorteada.nome, planta_sorteada.raridade)
+		# Adiciona o par (2 cartas) da planta sorteada
+		cartas.append(planta_sorteada)
+		cartas.append(planta_sorteada)
 		
 		cartas_necessarias -= 2
-		planta_index += 1
 	
-	print("Total de cartas geradas: ", cartas.size())
+	print("Total de cartas geradas com probabilidades: ", cartas.size())
 	
-	# Embaralha
-	cartas.shuffle()
+	# Embaralha para que os pares não fiquem colados
 	cartas.shuffle()
 	
 	return cartas
+	
+func sortear_planta_por_probabilidade(banco_por_bioma: Array) -> PlantaData:
+	var dado = randi_range(1, 100) # Rola o dado de 1 a 100
+	
+	var raridade_alvo = "COMUM"
+	
+	var dif = Global.dificuldade_selecionada 
 
+	# Lógica de Pesos (Baseado na sua sugestão para o Fácil)
+	if dif == 0: # FÁCIL
+		if dado <= 5: # 1 a 10 (10%)
+			raridade_alvo = "RARO"
+		elif dado <= 25: # 11 a 30 (20%)
+			raridade_alvo = "INCOMUM"
+		else: # 31 a 100 (70%)
+			raridade_alvo = "COMUM"
+			
+	elif dif == 1: # MÉDIO (Exemplo de ajuste)
+		if dado <= 15: raridade_alvo = "RARO"
+		elif dado <= 40: raridade_alvo = "INCOMUM"
+		else: raridade_alvo = "COMUM"
+		
+	else: # DIFÍCIL (dif == 2)
+		if dado <= 25: raridade_alvo = "RARO"
+		elif dado <= 55: raridade_alvo = "INCOMUM"
+		else: raridade_alvo = "COMUM"
+
+	# Filtra as opções do banco
+	var opcoes = banco_por_bioma.filter(func(p): return p.raridade == raridade_alvo)
+	
+	# Fallback de segurança (Caso o bioma não tenha uma raridade específica)
+	if opcoes.is_empty():
+		return banco_por_bioma.pick_random()
+	
+	print("Rolei: ", dado)
+	return opcoes.pick_random()
+	
 func distribuir_cartas(plantas: Array):
 	for i in range(plantas.size()):
 		var carta = instanciar_carta()
@@ -303,7 +338,7 @@ func _on_reiniciar_pressed():
 
 # Conecte o botão "Menu Principal" a esta função:
 func _on_voltar_menu_pressed():
-	get_tree().change_scene_to_file("res://Cenas/menu_principal.tscn")
+	get_tree().change_scene_to_file("res://Cenas/MapaRegional.tscn")
 
 func processar_match_falhou(segunda_carta):
 	print("❌ Não é match: ", carta_selecionada.planta_data.nome, " != ", segunda_carta.planta_data.nome)
