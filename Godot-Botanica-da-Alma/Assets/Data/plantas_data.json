@@ -4,7 +4,7 @@
 			"id": "raiz_lumina",
 			"nome": "Raiz de Lumina",
 			"raridade": "COMUM",
-			"texture_path": "res://Assets/Art/Plantas/raiz_lumina.png",
+			"texture_path": "res://Assets/Art/Plantas/raiz_de_lumina.png",
 			"descricao": "Uma raiz que brilha suavemente no escuro",
 			"regiao": "FLORESTA"
 		},
@@ -20,7 +20,7 @@
 			"id": "folha_orvalho",
 			"nome": "Folha de Orvalho",
 			"raridade": "COMUM",
-			"texture_path": "res://Assets/Art/Plantas/folha_orvalho.png",
+			"texture_path": "res://Assets/Art/Plantas/folha_de_orvalho.png",
 			"descricao": "Conserva gotas de orvalho matinal",
 			"regiao": "FLORESTA"
 		},
@@ -60,7 +60,7 @@
 			"id": "erva_vale",
 			"nome": "Erva do Vale",
 			"raridade": "COMUM",
-			"texture_path": "res://Assets/Art/Plantas/erva_vale.png",
+			"texture_path": "res://Assets/Art/Plantas/erva_do_vale.png",
 			"descricao": "Cresce nos vales mais profundos da floresta",
 			"regiao": "FLORESTA"
 		},
@@ -108,7 +108,7 @@
 			"id": "broto_carvalho",
 			"nome": "Broto de Carvalho", 
 			"raridade": "COMUM",
-			"texture_path": "res://Assets/Art/Plantas/broto_carvalho.png",
+			"texture_path": "res://Assets/Art/Plantas/broto_de_carvalho.png",
 			"descricao": "O início de uma grande árvore ancestral",
 			"regiao": "FLORESTA"
 		},
@@ -125,8 +125,8 @@
 			"nome": "GRAMA_AZUL",
 			"raridade": "COMUM",
 			"texture_path": "res://Assets/Art/Plantas/grama_azul.png",
-			"descricao": "A grama que se espalha pela base da floresta, rica em mana",
-			"regiao": "FLORESTAENCANTANDA"
+			"descricao": "Rara e bela, encontrada apenas em locais secretos",
+			"regiao": "FLORESTA_ENCANTADA"
 		}
 	]
 }

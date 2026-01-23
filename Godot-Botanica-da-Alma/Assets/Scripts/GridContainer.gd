@@ -11,7 +11,7 @@ var spacing = 10
 # Estado do jogo
 var carta_selecionada = null
 var cliques_travados = false
-var background_node: ColorRect
+var background_node: Control
 var total_pares: int = 0
 var pares_encontrados: int = 0
 
@@ -68,21 +68,24 @@ func limpar_grid():
 		child.queue_free()
 
 func criar_banco_plantas() -> Array:
-	# 1. Pega a lista bruta do seu Gerenciador
+	# 1. Carrega todas as plantas
 	var todas = GerenciadorPlantas.carregar_plantas()
 	
-	# 2. Filtra para manter apenas o bioma selecionado no Mapa
-	# Use o nome da variável que você definiu no Global (ex: bioma_selecionado_provisorio)
+	# 2. Pega o nome exato do bioma definido no Enum do Global
+	# Se no Enum for FLORESTA_ENCANTADA, esta variável será "FLORESTA_ENCANTADA"
+	var nome_bioma_alvo = Global.Biomas.keys()[Global.bioma_selecionado]
+	
+	# 3. Filtra comparando com o JSON
 	var banco_filtrado = todas.filter(func(p): 
-		if(Global.bioma_selecionado == 0):
-			
-			return p.regiao == Global.bioma_selecionado_provisorio
+		return p.regiao == nome_bioma_alvo
 	)
 	
-	# Fallback caso o filtro falhe (opcional mas seguro)
+	# 4. Verificação de erro amigável
 	if banco_filtrado.is_empty():
-		print("⚠️ Erro: Bioma '", Global.bioma_selecionado_provisorio, "' não encontrado no JSON. Usando banco completo.")
-		
+		print("⚠️ ALERTA: Nenhuma planta encontrada para o bioma: ", nome_bioma_alvo)
+		print("Verifique se no JSON está escrito exatamente: ", nome_bioma_alvo)
+		return todas # Retorna tudo para não quebrar o sorteio e dar erro de 'Nil'
+	print("⚠️ ALERTA: Bioma selecionado: ", nome_bioma_alvo,"" ,Global.bioma_selecionado, "", Global.bioma_selecionado_provisorio)
 	return banco_filtrado
 	
 func gerar_pares_plantas() -> Array:
@@ -98,7 +101,6 @@ func gerar_pares_plantas() -> Array:
 		# --- A MUDANÇA ESTÁ AQUI ---
 		# Em vez de seguir a ordem do banco, sorteamos uma planta baseada na dificuldade
 		var planta_sorteada = sortear_planta_por_probabilidade(banco_plantas)
-		print(planta_sorteada.nome, planta_sorteada.raridade)
 		# Adiciona o par (2 cartas) da planta sorteada
 		cartas.append(planta_sorteada)
 		cartas.append(planta_sorteada)
@@ -257,29 +259,60 @@ func ajustar_grid_para_tela(screen_size: Vector2):
 	print("   Máximo na tela: ", Vector2(max_colunas, max_linhas))
 
 func carregar_background():
-	background_node = get_node("../BackGround") as ColorRect
+	print("\n--- 🔍 INICIANDO CHECAGEM DE BACKGROUND ---")
 	
-	if background_node:
+	# 1. Tenta localizar o nó na árvore de cena
+	# Usamos get_parent().get_node_or_null para ser mais preciso conforme sua árvore
+	background_node = get_parent().get_node_or_null("BackGround")
 	
-		var tabuleiro_data = GerenciadorTabuleiros.carregar_tabuleiro(Global.bioma_selecionado_provisorio)
+	if background_node == null:
+		push_error("❌ ERRO: Nó 'BackGround' não foi encontrado no caminho especificado.")
+		return
+	else:
+		print("✅ Nó localizado: ", background_node.name, " (Classe: ", background_node.get_class(), ")")
+
+	# 2. Pega o nome do bioma via Enum
+	var nome_bioma = Global.Biomas.keys()[Global.bioma_selecionado]
+	print("📂 Bioma selecionado para busca no JSON: ", nome_bioma)
+
+	# 3. Chama o Gerenciador e checa o retorno
+	var tabuleiro_data = GerenciadorTabuleiros.carregar_tabuleiro(nome_bioma)
+	
+	if tabuleiro_data.is_empty():
+		push_error("❌ ERRO: Gerenciador retornou um dicionário vazio para: " + nome_bioma)
+		return
+	
+	# 4. Checagem da textura
+	var tex = tabuleiro_data["background_texture"]
+	if tex == null:
+		push_error("❌ ERRO: O dicionário existe, mas a textura está nula.")
+		return
+	else:
+		print("🖼️ Textura carregada com sucesso! Dimensões: ", tex.get_size())
+
+	# 5. Aplicação no Nó (Ajustado para evitar erro de tipo)
+	if background_node.has_method("set_texture"):
+		# Se o seu nó já for um TextureRect (raro neste caso)
+		background_node.texture = tex
+		print("🎯 Textura aplicada diretamente.")
+	else:
+	# Como ele é um ColorRect, gerenciamos o filho de exibição
+		var exibicao = background_node.get_node_or_null("ImagemFundo") as TextureRect
+	
+		if not exibicao:
+			exibicao = TextureRect.new()
+			exibicao.name = "ImagemFundo"
+			background_node.add_child(exibicao)
+			print("➕ Criado novo TextureRect para o fundo.")
 		
-		if not tabuleiro_data.is_empty():
-			# Cria TextureRect como filho do ColorRect
-			var texture_rect = TextureRect.new()
-			texture_rect.texture = tabuleiro_data["background_texture"]
-			texture_rect.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
-			texture_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-			texture_rect.size = background_node.size
-			texture_rect.position = Vector2.ZERO
-			
-			# Remove anterior se existir
-			var old_texture = background_node.get_node_or_null("BackgroundTexture")
-			if old_texture:
-				old_texture.queue_free()
-			
-			texture_rect.name = "BackgroundTexture"
-			background_node.add_child(texture_rect)
-			print("🎨 Background aplicado: ", tabuleiro_data["nome"])
+		exibicao.texture = tex
+		exibicao.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		exibicao.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		# Garante que a imagem cubra todo o retângulo do fundo
+		exibicao.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		print("🎯 Imagem configurada para cobrir o ColorRect.")
+
+		print("--- ✨ CHECAGEM FINALIZADA COM SUCESSO ---\n")
 
 # =============================================================================
 # LÓGICA DO JOGO (PERMANECE IGUAL)

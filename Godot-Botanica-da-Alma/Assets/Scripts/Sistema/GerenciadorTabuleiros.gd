@@ -13,7 +13,7 @@ static func carregar_tabuleiro(regiao: String) -> Dictionary:
 	
 	var json = JSON.new()
 	var parse_result = json.parse(json_text)
-	
+	print("Aqui")
 	if parse_result != OK:
 		push_error("❌ Erro ao parsear JSON de tabuleiros: " + json.get_error_message())
 		return {}

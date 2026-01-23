@@ -1,8 +1,12 @@
 {
   "tabuleiros": {
-	"floresta": {
-	  "nome": "Floresta",
-	  "background": "res://Assets/Art/Tabuleiros/limites_da_floresta.png",
-	}
+		"FLORESTA": {
+		  "nome": "FLORESTA",
+		  "background": "res://Assets/Art/Tabuleiros/FLORESTA.png",
+		},
+		"FLORESTA_ENCANTADA": {
+			"nome": "FLORESTA_ENCANTADA",
+			"background": "res://Assets/Art/Tabuleiros/FLORESTA_ENCANTADA.png"
+		}
   }
 }

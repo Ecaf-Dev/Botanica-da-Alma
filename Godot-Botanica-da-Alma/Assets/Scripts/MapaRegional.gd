@@ -7,8 +7,8 @@ func _ready():
 
 func _on_texture_button_floresta_encantada_pressed():
 	popup.show()
-	Global.Biomas.FLORESTA_ENCANTADA
-	Global.bioma_selecionado_provisorio = "FLORESTAENCANTANDA"
+	Global.bioma_selecionado = Global.Biomas.FLORESTA_ENCANTADA
+	Global.bioma_selecionado_provisorio = "FLORESTA_ENCANTADA"
 
 func _on_button_fechar_pressed():
 	popup.hide() # Replace with function body.
@@ -29,5 +29,5 @@ func _on_button_dificil_pressed():
 
 func _on_texture_button_floresta_pressed():
 	popup.show()
-	Global.Biomas.FLORESTA
+	Global.bioma_selecionado = Global.Biomas.FLORESTA
 	Global.bioma_selecionado_provisorio = "FLORESTA"
